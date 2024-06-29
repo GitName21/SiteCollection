@@ -2,11 +2,67 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 		<title>网站合集</title>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		
+		<div class="container">
+			<!-- 导航栏 -->
+			<div class="nav-wrap">
+				<!-- pc -->
+				<div class="nav-pc-wrap">
+					<!-- 导航栏菜单 -->
+					<ul class="nav-pc-left">
+						<li><a href="index.html">首页 / HOME</a></li>
+						<li class="mobile-hide">
+							<a href="">关于</a>
+							<div class="nav-next-wrap">
+								<ul>
+									<li><a href="">网站声明</a></li>
+									<li><a href="">公众平台</a></li>
+									<li><a href="">分享网站</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="mobile-hide">
+							<a href="">反馈</a>
+							<div class="nav-next-wrap">
+								<ul>
+									<li><a href="">添加收录</a></li>
+									<li><a href="">其它反馈</a></li>
+								</ul>
+							</div>
+						</li>
+						<div class="nav-focus mobile-hide"></div>
+					</ul>
+					<!-- 搜索框 -->
+					<div class="nav-pc-right">
+						<form action="get">
+							<div class="nav-pc-select">
+								<select>
+										<option value="站内搜索">站内搜索</option>
+										<option value="站外搜索">站外搜索</option>
+								</select>
+							</div>
+							<!-- 搜索框 -->
+							<input type="text" class="search" name="search" value="" placeholder="请输入你要搜索的内容"/>
+							<button class="search-sub">
+								<svg t="1719682939282" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4357" width="16" height="16"><path d="M774.991188 759.692531l201.863039 201.863039a36.569391 36.569391 0 0 1-51.782258 51.70912L717.138411 805.257993a438.832694 438.832694 0 1 1 57.779638-45.565462zM475.561014 804.526605A365.693911 365.693911 0 1 0 475.561014 73.138782a365.693911 365.693911 0 0 0 0 731.387823z" fill="#CCCCCC" p-id="4358"></path></svg>
+							</button>
+						</form>
+						<!-- 移动端展开按钮 -->
+						<div class="nav-mobil-btn">
+							1
+						</div>
+					</div>
+				</div>
+				<!-- mobile -->
+				<div class="nav-mobile-wrap">
+					
+				</div>
+			</div>
+		</div>
 	</body>
 	<script src="js/script.js" type="text/javascript"></script>
 </html>

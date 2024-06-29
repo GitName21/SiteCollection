@@ -1,0 +1,66 @@
+*{margin: 0;padding: 0;}
+a{color:inherit;text-decoration: none;-webkit-tap-highlight-color:transparent;display: block;width: 100%;height: 100%;}/*取消a标签在移动端点击时产生的背景色*/
+ul{list-style: none;}
+html{font-size: 100%;}
+img{border: 0;display: block;margin: 0;padding: 0;}
+
+/* 变量 */
+:root{
+	
+}
+
+/* 全局 */
+body{background-color: #141332;font-size: 0.875rem;}
+.container{width: 100%;height: auto;position: relative;}
+
+/* 导航 */
+.nav-wrap{width: 100%;height: auto;background-color: #1D1D41;}
+.nav-pc-wrap{width: 112.5rem;height: auto;margin: 0 auto;display: flex;justify-content: space-between;align-items: center;}
+/* 一级 */
+.nav-pc-left{width: auto;height: auto;display: flex;color: #fff;flex-wrap: nowrap;position: relative;}
+.nav-pc-left>li{margin-right: 2rem;width: 6.25rem;height: 5rem;display: flex;align-items: center;justify-content: center;position: relative;}
+.nav-pc-left>li>a{display: flex;justify-content: center;align-items: center;}
+.nav-pc-left>li:first-child{width: auto;font-weight: bold;margin-right:4rem;}
+/* 二级 */
+.nav-next-wrap{position: absolute;left: 0;top: 5rem;width: 13.9375rem;height: 15.5rem;visibility: hidden;opacity: 0;transition: all 0.3s ease;transform: scale(0.6);}
+.nav-next-wrap ul{background-color: #1D1D41;padding: 15% 0;position: absolute;top: 0.9375rem;width:100%;border-radius: 1.25rem;box-shadow: 0px 0px 13px  rgba(0, 0, 0, 0.35);}
+.nav-next-wrap ul li a{padding: 0 15%;line-height: 3.4375rem;width: 70%;transition: all .3s ease;}
+.nav-pc-left>li:hover .nav-next-wrap{visibility: visible;opacity: 1;transform: scale(1);}
+.nav-next-wrap ul li a:hover{padding: 0 25%;line-height: 3.4375rem;width: 50%;}
+
+.nav-pc-right,.nav-pc-right form{display: flex;flex-wrap: nowrap;width: auto;height: auto;align-items: center;position: relative;}
+.nav-pc-select select{background-color: transparent;border: 0;color: #fff;margin-right: 0.5rem;}
+.nav-pc-select select option{background-color:rgba(0, 0, 0, 0);border: 0;color: #252525;outline: none;border-radius: 0.625rem;}
+.search{outline: none;width: 17.5rem;height: 2.1875rem;padding: 0rem 2rem 0 0.5rem;border: 1px solid #CCCCCC;background-color: transparent;border-radius: 0.3125rem;color: #fff;}
+.search-sub{width: 2.1875rem;height: 2.1875rem;background-color: transparent;position: absolute;border: 0;right: 0.05rem;border-radius: 0.3125rem;display: flex;align-items: center;justify-content: center;cursor: pointer;}
+.nav-focus{width: 6.25rem;height: 0.25rem;background-color: #6359E9;position: absolute;bottom: 0;left: 0;}
+/* 移动端展开按钮 */
+.nav-mobil-btn{display: none;width: 30px;height: 30px;background-color: red;}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 767px) {
+	/* 导航栏 */
+	.nav-pc-wrap{width: 95%;}
+	/* 移动端展开按钮 */
+	.nav-mobil-btn{display: block;}
+	.nav-pc-right>form{display: none;}
+	.nav-pc-left .mobile-hide{display: none;} /* 移动端隐藏样式 */
+	
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) and (max-width:992px) {
+	.nav-pc-wrap{width: 95%;}
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width:992px) and (max-width:1200px) {
+	.nav-pc-wrap{width: 59.375rem;}
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) and (max-width:1850px) {
+	.nav-pc-wrap{width: 71.875rem;}
+}
+
+
