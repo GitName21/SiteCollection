@@ -74,7 +74,7 @@ for(var i=0;i<navMobile.length;i++){
 	// console.log("数组：" + NextNavNowShowArray)
 	
 	navMobile[i].onclick = function(){
-		console.log(NextNavNowShowArray[this.index]);
+		// console.log(NextNavNowShowArray[this.index]);
 		var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
 		if(NextNavNowShowArray[this.index] == true){	//这里要用==
 			objec[1].animate([	//文字进入动画
@@ -111,7 +111,7 @@ for(var i=0;i<navMobile.length;i++){
 			})
 			NextNavNowShowArray[this.index] = true;
 		}
-		console.log("当前数组值：" + NextNavNowShowArray)
+		// console.log("当前数组值：" + NextNavNowShowArray)
 	}
 }
 
