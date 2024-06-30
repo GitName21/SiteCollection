@@ -64,17 +64,17 @@ navMobilBtn.onclick = function(){
 
 // 移动端二级导航栏事件
 var navMobile = document.querySelectorAll(".nav-mobile>li");	//获取点击对象
-console.log(navMobile.length)
+// console.log(navMobile.length)
 var NextNavNowShowArray = new Array();
 
 for(var i=0;i<navMobile.length;i++){
 	NextNavNowShowArray.push(true);	//利用数组给每个菜单设置展开开关（用来判断菜单是否展开）,默认按钮为true,状态：未展开
 	navMobile[i].index = i;	//赋值下标给对应对象
-	console.log("对象下标：" + navMobile[i].index)
-	console.log("数组：" + NextNavNowShowArray)
+	// console.log("对象下标：" + navMobile[i].index)
+	// console.log("数组：" + NextNavNowShowArray)
 	
 	navMobile[i].onclick = function(){
-		console.log(NextNavNowShowArray[this.index])
+		console.log(NextNavNowShowArray[this.index]);
 		var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
 		if(NextNavNowShowArray[this.index] == true){	//这里要用==
 			objec[1].animate([	//文字进入动画
@@ -112,5 +112,92 @@ for(var i=0;i<navMobile.length;i++){
 			NextNavNowShowArray[this.index] = true;
 		}
 		console.log("当前数组值：" + NextNavNowShowArray)
+	}
+}
+
+// pc端设置菜单事件
+var SetBtn = document.querySelector(".main-set-btn");
+var SetList = document.querySelector(".main-set-list");
+var SetShow = true;
+SetBtn.onclick = function(){
+	if(SetShow){
+		// 按钮动画
+		SetBtn.animate([
+			{
+				transform: 'rotate(0deg)',
+			},
+			{
+				transform: 'rotate(360deg)',
+				background:'#6359E9',
+			}
+		],{
+			duration:500,
+			fill:'forwards'
+		})
+		
+		SetList.animate([
+			{
+				visibility: 'hidden',
+				transform: 'translateY(6rem) scale(0)',
+				opacity: 0
+			},
+			{
+				visibility: 'visible',
+				transform: 'translateY(0rem) scale(1)',
+				opacity: 1
+			},
+			{
+				visibility: 'visible',
+				transform: 'translateY(0rem) scale(1)',
+				opacity: 1
+			}
+		],{
+			duration:300,
+			fill:'forwards'
+		});
+		SetShow = false;
+	}else{
+		// 按钮动画
+		SetBtn.animate([
+			{
+				transform: 'rotate(0deg)',
+			},
+			{
+				transform: 'rotate(-360deg)',
+				background:'#343469',
+			}
+		],{
+			duration:500,
+			fill:'forwards'
+		})
+		
+		SetList.animate([
+			{
+				visibility: 'visible',
+				transform: 'translateY(0rem) scale(1)',
+				opacity: 1
+			},
+			{
+				visibility: 'hidden',
+				transform: 'translateY(6rem) scale(0)',
+				opacity: 0
+			},
+		],{
+			duration:300,
+			fill:'forwards'
+		});
+		SetShow = true;
+	}
+
+}
+
+// 移动端顶部轮播
+var SwiperBth = document.querySelectorAll(".swiper-bth li");
+var SwiperObject = document.querySelector(".main-left-wrap")
+for(var i=0;i<SwiperBth.length;i++){
+	SwiperBth[i].index = i;
+	SwiperBth[i].onclick = function(){
+		var left = 90*this.index+this.index * 5.3;	//5.3是style里面的外边距
+		SwiperObject.style.cssText = "left:" + -left + "%";
 	}
 }
