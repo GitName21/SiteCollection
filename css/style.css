@@ -44,7 +44,7 @@ body{background-color: #141332;font-size: 0.875rem;}
 .nav-mobile{width: 100%;height: auto;padding: 2rem 0 1rem 0;}
 .nav-mobile>li{background-color: #141332;border-radius: 0.625rem;width:90%;padding: 5%;margin-bottom: 0.625rem;}
 .nav-mobile>li>a,.nav-mobile>li>a>span{display: flex;align-items: center;justify-content: space-between;}
-.nav-mobile-next-wrap{width: 84%;padding: 4% 8%;}
+.nav-mobile-next-wrap{width: 84%;padding: 4% 8%;display: none;opacity: 0;}
 .nav-mobile-next-wrap li{padding: 1rem 0;}
 /* 移动菜单 */
 .menu-mobile-wrap{width: 100%;height: auto;}
