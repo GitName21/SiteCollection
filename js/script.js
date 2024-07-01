@@ -78,7 +78,7 @@ for(var i=0;i<navMobile.length;i++){
 		// console.log(NextNavNowShowArray[this.index]);
 		var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
 		if(NextNavNowShowArray[this.index] == 1){	//这里要用==
-			objec[1].style.cssText = "display:block";
+			objec[1].style.cssText = "display:block";	//display:block不能放在animate里面，不然小米浏览器没有效果
 			objec[1].animate([	//文字进入动画
 				{
 					opacity: 0,

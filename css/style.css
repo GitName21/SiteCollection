@@ -136,7 +136,8 @@ body{background-color: #141332;font-size: 0.875rem;}
 	/* 列表 */
 	.main-item-content>li{width:100%;border-radius: 0.625rem;}
 	.main-item-content>li>a{padding: 5%;width: auto;height: auto;}
-	.main-item-content-other{opacity: 1;transform: scale(1);position: static;background-color: transparent;padding:5%;width: 90%;}
+	.main-item-content-other{opacity: 1;transform: scale(1);position: static;background-color: transparent;padding:5%;width: 90%;padding-top: 0;}
+	.main-item-content-other div:last-child{background-color: #1E1EB3;padding: 0.4rem 0.8rem;border-radius: 0.3125rem;}
 	.main-item-content>li:hover{background-color: #1D1D41;}
 	
 }
