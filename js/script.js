@@ -216,3 +216,9 @@ for(var i=0;i<SwiperBth.length;i++){
 
 	}
 }
+
+// 数量
+var NumObject = document.querySelector(".main-item-moblie-name");
+var NumCont = NumObject.children[1];
+var listNum = document.querySelectorAll(".main-item-content>li")
+NumCont.innerHTML = "共[ " + listNum.length + "条 ]";
