@@ -197,7 +197,20 @@ var SwiperObject = document.querySelector(".main-left-wrap")
 for(var i=0;i<SwiperBth.length;i++){
 	SwiperBth[i].index = i;
 	SwiperBth[i].onclick = function(){
+	
+		// console.log(this.index)
 		var left = 90*this.index+this.index * 5.3;	//5.3是style里面的外边距
 		SwiperObject.style.cssText = "left:" + -left + "%";
+		
+		for(var i=0;i<SwiperBth.length;i++){
+			SwiperBth[i].index = i;
+			// console.log(SwiperBth[i].index)
+			if(SwiperBth[i].index == this.index){
+				SwiperBth[i].style.cssText = "background-color:#CCCCCC;";
+			}else{
+				SwiperBth[i].style.cssText = "background-color:#1D1D41;";
+			}
+		}
+
 	}
 }

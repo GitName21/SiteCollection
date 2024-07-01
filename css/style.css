@@ -73,9 +73,12 @@ body{background-color: #141332;font-size: 0.875rem;}
 .main-set-btn{width: 2.5rem;height: 2.5rem;background-color: #343469;border-radius: 100%;display: flex;justify-content: center;align-items: center;cursor: pointer;}
 .main-set-list{width: 100%;display: flex;justify-content: center;flex-wrap: wrap;visibility: hidden;opacity: 0;}
 .main-set-list li{width: 4.25rem;height: 2.5rem;justify-content: space-between;display: flex;align-items: center;color: #fff;background-color: #343469;border-radius: 10rem;margin-bottom: 0.5rem;padding: 0 1rem;cursor: pointer;}
+/* 其它 */
+.other{width:100%;height: 100%;background-color: #343469;flex-shrink:0;margin-left: 6%;justify-content: center;align-items: center;font-size: 1.625rem;color: #fff;border-radius: 0.625rem;display: none;}
 /* 点击轮播按钮 */
 .swiper-bth{width: 100%;height: auto;/* display: flex; */justify-content: center;align-items: center;flex-wrap: nowrap;display: none;}
 .swiper-bth li{width: 1.8rem;height: 0.3rem;background-color: #1D1D41;margin: 1.5rem 0.5rem;border-radius: 1rem;cursor: pointer;}
+.swiper-bth li:first-child{background-color: #cccccc;}
 /* 右边 */
 .main-right{width: 95rem;height: auto;}
 .main-item{width: 100%;height: auto;}
@@ -123,6 +126,8 @@ body{background-color: #141332;font-size: 0.875rem;}
 	.main-set-btn{display: none;}
 	.main-set-list{width: 100%;justify-content: space-between;flex-wrap: nowrap;visibility: visible;opacity: 1;align-items: center;}
 	.main-set-list li{width: 4.2rem;height:5rem;border-radius: 0.625rem;margin-bottom: 0;}
+	/* 其它 */
+	.other{display: flex;}
 	/* 点击轮播按钮 */
 	.swiper-bth{display: flex;}
 	/* 右边 */
