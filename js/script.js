@@ -74,10 +74,11 @@ for(var i=0;i<navMobile.length;i++){
 	// console.log("数组：" + NextNavNowShowArray)
 	
 	navMobile[i].onclick = function(){
-		alert('')
+		// alert('')
 		// console.log(NextNavNowShowArray[this.index]);
 		// var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
-		// // if(NextNavNowShowArray[this.index] == 1){	//这里要用==
+		if(NextNavNowShowArray[this.index] == 1){	//这里要用==
+		alert('1')
 		// 	objec[1].animate([	//文字进入动画
 		// 		{
 		// 			display:'block',
@@ -94,7 +95,8 @@ for(var i=0;i<navMobile.length;i++){
 		// 		fill:'forwards'
 		// 	})
 			// NextNavNowShowArray[this.index] = 0;
-		// }else{
+		}else{
+			alert('0')
 		// 	objec[1].animate([	//文字进入动画
 		// 		{
 		// 			display:'block',
@@ -111,7 +113,7 @@ for(var i=0;i<navMobile.length;i++){
 		// 		fill:'forwards'
 		// 	})
 		// 	NextNavNowShowArray[this.index] = 0;
-		// }
+		}
 		// console.log("当前数组值：" + NextNavNowShowArray)
 	}
 }
