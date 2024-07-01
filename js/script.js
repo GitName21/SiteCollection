@@ -68,7 +68,7 @@ var navMobile = document.querySelectorAll(".nav-mobile>li");	//获取点击对�
 var NextNavNowShowArray = new Array();
 
 for(var i=0;i<navMobile.length;i++){
-	NextNavNowShowArray.push(true);	//利用数组给每个菜单设置展开开关（用来判断菜单是否展开）,默认按钮为true,状态：未展开
+	NextNavNowShowArray.push(1);	//利用数组给每个菜单设置展开开关（用来判断菜单是否展开）,默认按钮为true,状态：未展开
 	navMobile[i].index = i;	//赋值下标给对应对象
 	// console.log("对象下标：" + navMobile[i].index)
 	// console.log("数组：" + NextNavNowShowArray)
@@ -76,7 +76,7 @@ for(var i=0;i<navMobile.length;i++){
 	navMobile[i].onclick = function(){
 		// console.log(NextNavNowShowArray[this.index]);
 		var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
-		if(NextNavNowShowArray[this.index] == true){	//这里要用==
+		if(NextNavNowShowArray[this.index] == 1){	//这里要用==
 			objec[1].animate([	//文字进入动画
 				{
 					display:'block',
@@ -92,7 +92,7 @@ for(var i=0;i<navMobile.length;i++){
 				duration:500,
 				fill:'forwards'
 			})
-			NextNavNowShowArray[this.index] = false;
+			NextNavNowShowArray[this.index] = 0;
 		}else{
 			objec[1].animate([	//文字进入动画
 				{
@@ -109,7 +109,7 @@ for(var i=0;i<navMobile.length;i++){
 				duration:300,
 				fill:'forwards'
 			})
-			NextNavNowShowArray[this.index] = true;
+			NextNavNowShowArray[this.index] = 0;
 		}
 		// console.log("当前数组值：" + NextNavNowShowArray)
 	}
