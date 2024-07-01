@@ -94,7 +94,7 @@ for(var i=0;i<navMobile.length;i++){
 		// 		duration:500,
 		// 		fill:'forwards'
 		// 	})
-			// NextNavNowShowArray[this.index] = 0;
+			NextNavNowShowArray[this.index] = 0;
 		}else{
 			alert('0')
 		// 	objec[1].animate([	//文字进入动画
@@ -112,7 +112,7 @@ for(var i=0;i<navMobile.length;i++){
 		// 		duration:300,
 		// 		fill:'forwards'
 		// 	})
-		// 	NextNavNowShowArray[this.index] = 0;
+			NextNavNowShowArray[this.index] = 1;
 		}
 		// console.log("当前数组值：" + NextNavNowShowArray)
 	}
