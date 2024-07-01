@@ -81,14 +81,14 @@ for(var i=0;i<navMobile.length;i++){
 		alert(objec[1])
 			objec[1].animate([	//文字进入动画
 				{
-					display:'block',
-					// opacity: 0,
-					// transform: 'translateX(-2rem)',
+					
+					opacity: 0,
+					transform: 'translateX(-2rem)',
 				},
 				{
-					display:'block',
-					// opacity: 1,
-					// transform: 'translateX(0rem)',
+					
+					opacity: 1,
+					transform: 'translateX(0rem)',
 				},
 			],{
 				duration:500,
@@ -99,14 +99,14 @@ for(var i=0;i<navMobile.length;i++){
 			alert(objec[1])
 			objec[1].animate([	//文字进入动画
 				{
-					display:'block',
-					// opacity: 1,
-					// transform: 'translateX(0rem)',
+					
+					opacity: 1,
+					transform: 'translateX(0rem)',
 				},
 				{
-					display:'none',
-					// opacity: 0,
-					// transform: 'translateX(-2rem)',
+					
+					opacity: 0,
+					transform: 'translateX(-2rem)',
 				},
 			],{
 				duration:300,

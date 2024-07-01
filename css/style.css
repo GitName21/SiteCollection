@@ -42,9 +42,9 @@ body{background-color: #141332;font-size: 0.875rem;}
 /* 移动导航栏 */
 .nav-mobile-wrap{width:90%;height: 100%;background-color: #1D1D41;display: none;position: absolute;padding: 5rem 5% 0 5%;color: #fff;visibility: hidden;z-index: 98;top: 0;}
 .nav-mobile{width: 100%;height: auto;padding: 2rem 0 1rem 0;}
-.nav-mobile>li{background-color: #141332;border-radius: 0.625rem;width:90%;padding: 5%;margin-bottom: 0.625rem;height: auto;}
+.nav-mobile>li{background-color: #141332;border-radius: 0.625rem;width:90%;padding: 5%;margin-bottom: 0.625rem;height: ;}
 .nav-mobile>li>a,.nav-mobile>li>a>span{display: flex;align-items: center;justify-content: space-between;}
-.nav-mobile-next-wrap{width: 84%;padding: 4% 8%;display: none;opacity: 0;}
+.nav-mobile-next-wrap{width: 84%;padding: 4% 8%;opacity: 1;transform: scale(1);}
 .nav-mobile-next-wrap li{padding: 1rem 0;}
 /* 移动菜单 */
 .menu-mobile-wrap{width: 100%;height: auto;}
