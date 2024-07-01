@@ -63,7 +63,7 @@ navMobilBtn.onclick = function(){
 }
 
 // 移动端二级导航栏事件
-var navMobile = document.querySelectorAll(".nav-mobile>li");	//获取点击对象
+var navMobile = document.querySelectorAll(".nav-mobile li");	//获取点击对象
 // console.log(navMobile.length)
 var NextNavNowShowArray = new Array();
 
