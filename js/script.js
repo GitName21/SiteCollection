@@ -63,7 +63,7 @@ navMobilBtn.onclick = function(){
 }
 
 // 移动端二级导航栏事件
-var navMobile = document.querySelectorAll(".nav-mobile li");	//获取点击对象
+var navMobile = document.querySelectorAll(".nav-mobile>li");	//获取点击对象
 // console.log(navMobile.length)
 var NextNavNowShowArray = new Array();
 
@@ -74,24 +74,25 @@ for(var i=0;i<navMobile.length;i++){
 	// console.log("数组：" + NextNavNowShowArray)
 	
 	navMobile[i].onclick = function(){
+		alert('')
 		// console.log(NextNavNowShowArray[this.index]);
-		var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
-		// if(NextNavNowShowArray[this.index] == 1){	//这里要用==
-			objec[1].animate([	//文字进入动画
-				{
-					display:'block',
-					opacity: 0,
-					transform: 'translateX(-2rem)',
-				},
-				{
-					display:'block',
-					opacity: 1,
-					transform: 'translateX(0rem)',
-				},
-			],{
-				duration:500,
-				fill:'forwards'
-			})
+		// var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
+		// // if(NextNavNowShowArray[this.index] == 1){	//这里要用==
+		// 	objec[1].animate([	//文字进入动画
+		// 		{
+		// 			display:'block',
+		// 			opacity: 0,
+		// 			transform: 'translateX(-2rem)',
+		// 		},
+		// 		{
+		// 			display:'block',
+		// 			opacity: 1,
+		// 			transform: 'translateX(0rem)',
+		// 		},
+		// 	],{
+		// 		duration:500,
+		// 		fill:'forwards'
+		// 	})
 			// NextNavNowShowArray[this.index] = 0;
 		// }else{
 		// 	objec[1].animate([	//文字进入动画
