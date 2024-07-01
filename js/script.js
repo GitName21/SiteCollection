@@ -79,39 +79,39 @@ for(var i=0;i<navMobile.length;i++){
 		var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
 		if(NextNavNowShowArray[this.index] == 1){	//这里要用==
 		alert(objec[1])
-		// 	objec[1].animate([	//文字进入动画
-		// 		{
-		// 			display:'block',
-		// 			opacity: 0,
-		// 			transform: 'translateX(-2rem)',
-		// 		},
-		// 		{
-		// 			display:'block',
-		// 			opacity: 1,
-		// 			transform: 'translateX(0rem)',
-		// 		},
-		// 	],{
-		// 		duration:500,
-		// 		fill:'forwards'
-		// 	})
+			objec[1].animate([	//文字进入动画
+				{
+					display:'block',
+					// opacity: 0,
+					// transform: 'translateX(-2rem)',
+				},
+				{
+					display:'block',
+					// opacity: 1,
+					// transform: 'translateX(0rem)',
+				},
+			],{
+				duration:500,
+				fill:'forwards'
+			})
 			NextNavNowShowArray[this.index] = 0;
 		}else{
 			alert(objec[1])
-		// 	objec[1].animate([	//文字进入动画
-		// 		{
-		// 			display:'block',
-		// 			opacity: 1,
-		// 			transform: 'translateX(0rem)',
-		// 		},
-		// 		{
-		// 			display:'none',
-		// 			opacity: 0,
-		// 			transform: 'translateX(-2rem)',
-		// 		},
-		// 	],{
-		// 		duration:300,
-		// 		fill:'forwards'
-		// 	})
+			objec[1].animate([	//文字进入动画
+				{
+					display:'block',
+					// opacity: 1,
+					// transform: 'translateX(0rem)',
+				},
+				{
+					display:'none',
+					// opacity: 0,
+					// transform: 'translateX(-2rem)',
+				},
+			],{
+				duration:300,
+				fill:'forwards'
+			})
 			NextNavNowShowArray[this.index] = 1;
 		}
 		// console.log("当前数组值：" + NextNavNowShowArray)
