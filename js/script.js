@@ -76,7 +76,7 @@ for(var i=0;i<navMobile.length;i++){
 	navMobile[i].onclick = function(){
 		// console.log(NextNavNowShowArray[this.index]);
 		var objec = navMobile[this.index].children;	//this.index当前点击元素的下标
-		if(NextNavNowShowArray[this.index] == 1){	//这里要用==
+		// if(NextNavNowShowArray[this.index] == 1){	//这里要用==
 			objec[1].animate([	//文字进入动画
 				{
 					display:'block',
@@ -92,25 +92,25 @@ for(var i=0;i<navMobile.length;i++){
 				duration:500,
 				fill:'forwards'
 			})
-			NextNavNowShowArray[this.index] = 0;
-		}else{
-			objec[1].animate([	//文字进入动画
-				{
-					display:'block',
-					opacity: 1,
-					transform: 'translateX(0rem)',
-				},
-				{
-					display:'none',
-					opacity: 0,
-					transform: 'translateX(-2rem)',
-				},
-			],{
-				duration:300,
-				fill:'forwards'
-			})
-			NextNavNowShowArray[this.index] = 0;
-		}
+			// NextNavNowShowArray[this.index] = 0;
+		// }else{
+		// 	objec[1].animate([	//文字进入动画
+		// 		{
+		// 			display:'block',
+		// 			opacity: 1,
+		// 			transform: 'translateX(0rem)',
+		// 		},
+		// 		{
+		// 			display:'none',
+		// 			opacity: 0,
+		// 			transform: 'translateX(-2rem)',
+		// 		},
+		// 	],{
+		// 		duration:300,
+		// 		fill:'forwards'
+		// 	})
+		// 	NextNavNowShowArray[this.index] = 0;
+		// }
 		// console.log("当前数组值：" + NextNavNowShowArray)
 	}
 }
