@@ -46,7 +46,7 @@ navMobilBtn.onclick = function(){
 			},
 			{
 				visibility: 'visible',
-				transform: 'translateY(1rem)',
+				transform: 'translateY(0.5rem)',
 				opacity: 1
 			},
 			{
