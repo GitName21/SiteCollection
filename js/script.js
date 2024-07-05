@@ -277,3 +277,81 @@ for(let i=0;i<MainMenuList.length;i++){
 	}
 }
 
+
+//元素居中
+let WindowWidth = window.innerWidth;
+let WindowHeight = window.innerHeight;
+var History = document.querySelector(".history-wrap")
+var HisIcon = document.querySelector(".history-icon")
+// 遮罩打开
+var mask = document.querySelector(".mask");
+function maskShow(){
+	mask.style.cssText = "display:block";
+	mask.animate([
+		{
+			background: 'rgba(0, 0, 0, 0)'
+		},
+		{
+			background: 'rgba(0, 0, 0, 0.5)'
+		}
+	],{
+		duration:600,
+		fill:'forwards'
+	})
+}
+// 遮罩收起
+mask.onclick = function(){
+	// 遮罩层收起
+	mask.style.cssText = "display:none";
+	//历史记录图标隐藏
+	HisIcon.style.cssText = "display:flex";
+	// 历史记录收起
+	History.animate([
+		{
+			width:'400px',
+			height:'400px',
+			borderRadius:'1.25rem'
+
+		},
+		{
+			width:'3.75rem',
+			height:'3.75rem',
+			borderRadius:'3rem',	//不能写border-radius
+			right:'10%',
+			bottom:'10%'
+		}
+	],{
+		duration:400,
+		fill:'forwards'
+	})
+}
+
+// 点击历史记录
+HisIcon.onclick = function(){
+	//历史记录图标隐藏
+	HisIcon.style.cssText = "display:none";
+	maskShow();
+	let HisAlertLeft = (WindowWidth - 400) / 2 + "px";
+	let HisAlertTop = (WindowHeight - 400) / 2 + "px";
+	// console.log(HisAlertLeft)
+	History.animate([
+		{
+			width:'3.75rem',
+			height:'3.75rem',
+			borderRadius:'3rem',	//不能写border-radius
+			right:'10%',
+			bottom:'10%'
+		},
+		{
+			width:'400px',
+			height:'400px',
+			borderRadius:'1.25rem',
+			right:HisAlertLeft,
+			bottom:HisAlertTop,
+			transform: 'scale(1)',
+		}
+	],{
+		duration:400,
+		fill:'forwards'
+	})
+}
