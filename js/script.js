@@ -220,5 +220,60 @@ for(var i=0;i<SwiperBth.length;i++){
 // 数量
 var NumObject = document.querySelector(".main-item-moblie-name");
 var NumCont = NumObject.children[1];
-var listNum = document.querySelectorAll(".main-item-content>li")
+var listNum = document.querySelectorAll(".main-item-content>li");
 NumCont.innerHTML = "共[ " + listNum.length + "条 ]";
+var thisIndex = 0;
+// 内容选项卡式面板
+var MainMenuList = document.querySelectorAll(".main-menu-list li");
+var MainItem = document.querySelectorAll(".main-item");
+// console.log(MainItem)
+for(let i=0;i<MainMenuList.length;i++){
+	MainMenuList[i].index = i;	//重新赋值给下标
+	MainMenuList[i].onclick = function(){
+		var thisIndex = this.index;
+		// 菜单栏点击焦点
+		MainMenuList[this.index].classList.add("main-menu-list-focus");	//当前点击元素添加焦点样式
+		for(let i=0;i<MainMenuList.length;i++){
+			MainMenuList[i].index = i;
+			if(MainMenuList[i] != MainMenuList[this.index]){
+				MainMenuList[i].classList.remove("main-menu-list-focus"); //其它元素移除焦点样式
+			}
+		}
+		// 内容点击焦点
+		for(let i=0;i<MainItem.length;i++){	//循环内容所有标签
+			MainItem[i].index = i;
+			if(MainItem[i].index == thisIndex){	//如果内容标签的下标和点击的菜单下标一致，则显示对应的内容
+			MainItem[i].style.cssText = "z-index:99";
+				MainItem[i].animate([	//进入动画
+					{
+						position:"absolute",
+						opacity:0,
+						transform: 'translateY(1.5rem)'
+					},{
+						position:"relative",
+						opacity:1,
+						transform: 'translateY(0)'
+					}
+				],{
+					duration:500,
+					fill:'forwards'
+				})
+			}else{
+				MainItem[i].style.cssText = "z-index:98";
+				MainItem[i].animate([	//退出动画 
+					{
+						position:"relative",
+						opacity:1
+					},{
+						position:"absolute",
+						opacity:0
+					}
+				],{
+					duration:0,
+					fill:'forwards'
+				})
+			}
+		}
+	}
+}
+
