@@ -327,12 +327,21 @@ mask.onclick = function(){
 }
 
 // 点击历史记录
+var objWidth = 0;
 HisIcon.onclick = function(){
+	if(WindowWidth<768){
+		objWidth = '90%';
+	}else{
+		objWidth = '400px';
+	}
 	//历史记录图标隐藏
 	HisIcon.style.cssText = "display:none";
 	maskShow();
 	let HisAlertLeft = (WindowWidth - 400) / 2 + "px";
 	let HisAlertTop = (WindowHeight - 400) / 2 + "px";
+	if(WindowWidth<768){
+		HisAlertLeft = '5%';
+	}
 	// console.log(HisAlertLeft)
 	History.animate([
 		{
@@ -343,7 +352,7 @@ HisIcon.onclick = function(){
 			bottom:'10%'
 		},
 		{
-			width:'400px',
+			width:objWidth,
 			height:'400px',
 			borderRadius:'1.25rem',
 			right:HisAlertLeft,
