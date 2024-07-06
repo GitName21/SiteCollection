@@ -84,7 +84,7 @@ body{background-color: #141332;font-size: 0.875rem;}
 .main-item{width: 100%;height: auto;position: absolute;opacity: 0;top: 0;left: 0;}
 .main-right>div:first-child{position: relative;opacity: 1;z-index: 99;}
 .main-item-moblie-name{display: none;margin-bottom: 2rem;}
-.main-item-moblie-name span:first-child{color: #ffffff;}
+.main-item-moblie-name span:first-child{color: #ffffff;font-size: 1.5rem;font-weight: bold;}
 .main-item-moblie-name span:last-child{margin-left: 1rem;font-size: 0.75rem;color: #6359E9;}
 /* 列表 */
 .main-item-content{width:100%;height: auto;background-color: ;display: flex;justify-content: space-between;flex-wrap: wrap;}

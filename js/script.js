@@ -329,16 +329,18 @@ mask.onclick = function(){
 // 点击历史记录
 var objWidth = 0;
 HisIcon.onclick = function(){
-	if(WindowWidth<768){
+	if(WindowWidth<768){	//如果是移动端设备的话，历史记录块的宽度调整为90%；
 		objWidth = '90%';
 	}else{
-		objWidth = '400px';
+		objWidth = '400px';	//如果不是移动端设备，就用400px宽度
 	}
 	//历史记录图标隐藏
 	HisIcon.style.cssText = "display:none";
-	maskShow();
+	maskShow();	//弹出遮罩层
+	
 	let HisAlertLeft = (WindowWidth - 400) / 2 + "px";
 	let HisAlertTop = (WindowHeight - 400) / 2 + "px";
+	
 	if(WindowWidth<768){
 		HisAlertLeft = '5%';
 	}
