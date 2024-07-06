@@ -51,6 +51,7 @@ body{background-color: #141332;font-size: 0.875rem;}
 .menu-mobile-wrap>li{width: 90%;padding: 5%;background-color: #6359E9;border-radius: 0.625rem;display: flex;align-items: center;margin-bottom: 1rem;}
 .menu-mobile-wrap>li>div{display: flex;align-items: center;}
 .menu-mobile-wrap>li>div:first-child{width:1.8rem;display: flex;justify-content: start;}
+.menu-mobile-wrap>li:last-child>div:first-child{margin-left: 0.18rem;}
 
 /* 内容 */
 /* 左边 */
