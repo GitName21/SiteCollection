@@ -93,7 +93,7 @@ body{background-color: #141332;font-size: 0.875rem;}
 .main-item-content>li>a{padding: 12%;width: auto;height: auto;}
 .main-item-content-other{position: absolute;bottom:1.8rem;padding: 5% 12%;background: rgba(30, 30, 179, 0.5);backdrop-filter: blur(4px);width: 76%;display: flex;justify-content: space-between;align-items: center;font-size: 0.75rem;opacity: 0;transition: all 0.35s ease;transform: scale(0.8);border-radius: 0.625rem;}
 .main-item-content-other div{display: flex;justify-content: space-between;align-items: center;}
-.main-item-content-other div img{margin-right: 0.3rem;}
+.main-item-content-other div img{margin-right: 0.3rem;width: 0.875rem;height: auto;}
 .main-item-content>li:hover .main-item-content-other{opacity: 1;transform: scale(1);}
 .main-item-content-title{display: flex;justify-content: space-between;align-items: center;flex-wrap: nowrap;}
 .main-item-content-title-name span:first-child{font-weight: bold;margin-right: 0.5rem;}
