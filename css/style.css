@@ -123,6 +123,9 @@ body{background-color: #141332;font-size: 0.875rem;}
 .history-list-cont-time{font-size: 0.75rem;color: #7d7d7d;}
 .history-show{width: 87%;padding: 0.5rem 1% 0.5rem 12%;font-size: 0.75rem;color: #7d7d7d;display: flex;justify-content: space-between;align-items: center;}
 .history-show div:last-child{display: flex;justify-content: center;align-items: center;cursor: pointer;}
+/* 底部 */
+.footer-wrap{width: 100%;height: auto;background-color: ;padding: 2rem 0;margin-top: 5rem;border-top: 1px solid #1D1D41;}
+.footer{width: 112.5rem;height: auto;margin: 0 auto;display: flex;justify-content: space-between;align-items: center;flex-wrap: nowrap;color: #5A5A6F;}
 /* 遮罩 */
 .mask{width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, 0);position: fixed;top: 0;left: 0;z-index: 1999;backdrop-filter: blur(4px);display: none;}
 
@@ -164,6 +167,9 @@ body{background-color: #141332;font-size: 0.875rem;}
 	.main-item-content-other{opacity: 1;transform: scale(1);position: static;background-color: transparent;padding:5%;width: 90%;padding-top: 0;}
 	.main-item-content-other div:last-child{background-color: #1E1EB3;padding: 0.4rem 0.8rem;border-radius: 0.3125rem;}
 	.main-item-content>li:hover{background-color: #1D1D41;}
+	.main-item-content-other>div:first-child,.main-item-content-other>div:nth-child(2){color: #c4c4c4;}
+	/* 底部 */
+	.footer{width:90%;}
 	/* 历史记录 */
 	.history-wrap{bottom: 10%;right: 10%;}
 }
@@ -185,7 +191,7 @@ body{background-color: #141332;font-size: 0.875rem;}
 	.main-left-wrap{width:90%;height: 7rem;padding: 1rem 5%;border-radius: 0.625rem;position: absolute;display: flex;flex-wrap: nowrap;top: 0;left: 0;transition: all 0.35s ease;}
 	.main-menu{display: none;}
 	/* 介绍 */
-	.main-left-introduce{margin: 1rem 0 0.8rem 0;width: 100%;flex-shrink:0;display: ;}
+	.main-left-introduce{margin: 1rem 0 0.8rem 0;width: 100%;flex-shrink:0;}
 	/* 设置 */
 	.main-set{flex-shrink:0;margin-left: 6%;}
 	.main-set-btn{display: none;}
