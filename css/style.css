@@ -128,6 +128,15 @@ body{background-color: #141332;font-size: 0.875rem;}
 .footer{width: 112.5rem;height: auto;margin: 0 auto;display: flex;justify-content: space-between;align-items: center;flex-wrap: nowrap;color: #5A5A6F;}
 /* 遮罩 */
 .mask{width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, 0);position: fixed;top: 0;left: 0;z-index: 1999;backdrop-filter: blur(4px);display: none;}
+/* 收藏 */
+.alert-wrap{width: 22rem;height: auto;position: fixed;background-color: #1D1D41;padding: 2rem 1.5rem;z-index: 2000;border-radius: 1.25rem;display: none;left: 0;top: 0;opacity: 0;transform: scale(0.5);}
+.alert-wrap-tips{width: 100%;height: auto;display: flex;justify-content: space-between;align-items: center;color: #fff;}
+.alert-wrap-tips div{display: flex;align-items: center;}
+.alert-wrap-tips div svg{margin-left: 0.5rem;}
+/* 功能 */
+.alert-function{width:100%;height: auto;display: flex;flex-wrap: nowrap;justify-content: start;}
+.alert-function li{height: 1.875rem;display: flex;flex-wrap: nowrap;align-items: center;background-color: #1E1EB3;margin: 1.5rem 1rem 0 0;color: #fff;border-radius: 0.3125rem;justify-content: center;width: auto;padding: 0 0.8rem;cursor: pointer;}
+.alert-function li>svg{margin-right: 0.3rem;}
 
 /* 超小屏幕（手机，小于 768px） */
 @media (max-width: 767px) {
@@ -172,6 +181,9 @@ body{background-color: #141332;font-size: 0.875rem;}
 	.footer{width:90%;}
 	/* 历史记录 */
 	.history-wrap{bottom: 10%;right: 10%;}
+	/* 收藏 */
+	.alert-wrap{}
+	.alert-wrap-tips{}
 }
 
 /* 小屏幕（平板，大于等于 768px） */

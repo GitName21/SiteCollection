@@ -281,8 +281,13 @@ for(let i=0;i<MainMenuList.length;i++){
 //元素居中
 let WindowWidth = window.innerWidth;
 let WindowHeight = window.innerHeight;
+// 历史记录
 var History = document.querySelector(".history-wrap")
 var HisIcon = document.querySelector(".history-icon")
+// 收藏
+var alertWrap = document.querySelector(".alert-wrap");
+var collection = document.querySelector(".collection");
+
 // 遮罩打开
 var mask = document.querySelector(".mask");
 function maskShow(){
@@ -307,12 +312,12 @@ mask.onclick = function(){
 	HisIcon.style.cssText = "display:flex";
 	// 历史记录收起
 	History.animate([
-		{
-			width:'400px',
-			height:'400px',
-			borderRadius:'1.25rem'
+		// {
+		// 	width:'400px',
+		// 	height:'400px',
+		// 	borderRadius:'1.25rem'
 
-		},
+		// },
 		{
 			width:'3.75rem',
 			height:'3.75rem',
@@ -323,7 +328,25 @@ mask.onclick = function(){
 	],{
 		duration:400,
 		fill:'forwards'
-	})
+	});
+	
+	
+	
+	// 收藏
+	alertWrap.animate([
+		{
+			opacity:'0',
+			transform: 'scale(0.5)'
+		}
+	],{
+		duration:250,
+		fill:'forwards'
+	});
+	
+	var alertWrapTime = setTimeout(function(){
+		alertWrap.style.cssText = "display:none";
+		clearTimeout(alertWrapTime);
+	},200)
 }
 
 // 点击历史记录
@@ -346,13 +369,13 @@ HisIcon.onclick = function(){
 	}
 	// console.log(HisAlertLeft)
 	History.animate([
-		{
-			width:'3.75rem',
-			height:'3.75rem',
-			borderRadius:'3rem',	//不能写border-radius
-			right:'10%',
-			bottom:'10%'
-		},
+		// {
+		// 	width:'3.75rem',
+		// 	height:'3.75rem',
+		// 	borderRadius:'3rem',	//不能写border-radius
+		// 	right:'10%',
+		// 	bottom:'10%'
+		// },
 		{
 			width:objWidth,
 			height:'400px',
@@ -362,7 +385,26 @@ HisIcon.onclick = function(){
 			transform: 'scale(1)',
 		}
 	],{
-		duration:400,
+		duration:200,
+		fill:'forwards'
+	})
+}
+
+// 收藏弹窗
+collection.onclick = function(){
+	maskShow();
+	let ColAlertLeft = (WindowWidth - 400) / 2 + "px";
+	let ColAlertTop = (WindowHeight - 137) / 2 + "px";
+	alertWrapCss = "left:" + ColAlertLeft + ";" + "top:" + ColAlertTop + ";" + "display:block";
+	alertWrap.style.cssText = alertWrapCss;
+	
+	alertWrap.animate([
+		{
+			opacity:'1',
+			transform: 'scale(1)'
+		}
+	],{
+		duration:250,
 		fill:'forwards'
 	})
 }
