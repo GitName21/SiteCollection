@@ -326,7 +326,7 @@ mask.onclick = function(){
 			bottom:'10%'
 		}
 	],{
-		duration:400,
+		duration:300,
 		fill:'forwards'
 	});
 	
@@ -395,6 +395,9 @@ collection.onclick = function(){
 	maskShow();
 	let ColAlertLeft = (WindowWidth - 400) / 2 + "px";
 	let ColAlertTop = (WindowHeight - 137) / 2 + "px";
+	if(WindowWidth<768){
+		ColAlertLeft = '5%';
+	}
 	alertWrapCss = "left:" + ColAlertLeft + ";" + "top:" + ColAlertTop + ";" + "display:block";
 	alertWrap.style.cssText = alertWrapCss;
 	

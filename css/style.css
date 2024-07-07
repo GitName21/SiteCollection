@@ -129,9 +129,10 @@ body{background-color: #141332;font-size: 0.875rem;}
 /* 遮罩 */
 .mask{width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, 0);position: fixed;top: 0;left: 0;z-index: 1999;backdrop-filter: blur(4px);display: none;}
 /* 收藏 */
-.alert-wrap{width: 22rem;height: auto;position: fixed;background-color: #1D1D41;padding: 2rem 1.5rem;z-index: 2000;border-radius: 1.25rem;display: none;left: 0;top: 0;opacity: 0;transform: scale(0.5);}
-.alert-wrap-tips{width: 100%;height: auto;display: flex;justify-content: space-between;align-items: center;color: #fff;}
+.alert-wrap{width: 25rem;height: auto;position: fixed;background-color: #1D1D41;padding: 2rem 0;z-index: 2000;border-radius: 1.25rem;display: none;left: 0;top: 0;opacity: 0;transform: scale(0.5);}
+.alert-wrap-tips{width: 85%;height: auto;display: flex;justify-content: space-between;align-items: center;color: #fff;padding: 0 7.5%;}
 .alert-wrap-tips div{display: flex;align-items: center;}
+.alert-function{width: 85%;padding: 0 7.5%;}
 .alert-wrap-tips div svg{margin-left: 0.5rem;}
 /* 功能 */
 .alert-function{width:100%;height: auto;display: flex;flex-wrap: nowrap;justify-content: start;}
@@ -182,7 +183,7 @@ body{background-color: #141332;font-size: 0.875rem;}
 	/* 历史记录 */
 	.history-wrap{bottom: 10%;right: 10%;}
 	/* 收藏 */
-	.alert-wrap{}
+	.alert-wrap{width: 90%;}
 	.alert-wrap-tips{}
 }
 
