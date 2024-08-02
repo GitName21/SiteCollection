@@ -277,3 +277,137 @@ for(let i=0;i<MainMenuList.length;i++){
 	}
 }
 
+
+//元素居中
+let WindowWidth = window.innerWidth;
+let WindowHeight = window.innerHeight;
+// 历史记录
+var History = document.querySelector(".history-wrap")
+var HisIcon = document.querySelector(".history-icon")
+// 收藏
+var alertWrap = document.querySelector(".alert-wrap");
+var collection = document.querySelector(".collection");
+
+// 遮罩打开
+var mask = document.querySelector(".mask");
+function maskShow(){
+	mask.style.cssText = "display:block";
+	mask.animate([
+		{
+			background: 'rgba(0, 0, 0, 0)'
+		},
+		{
+			background: 'rgba(0, 0, 0, 0.5)'
+		}
+	],{
+		duration:600,
+		fill:'forwards'
+	})
+}
+// 遮罩收起
+mask.onclick = function(){
+	// 遮罩层收起
+	mask.style.cssText = "display:none";
+	//历史记录图标隐藏
+	HisIcon.style.cssText = "display:flex";
+	// 历史记录收起
+	History.animate([
+		// {
+		// 	width:'400px',
+		// 	height:'400px',
+		// 	borderRadius:'1.25rem'
+
+		// },
+		{
+			width:'3.75rem',
+			height:'3.75rem',
+			borderRadius:'3rem',	//不能写border-radius
+			right:'10%',
+			bottom:'10%'
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	});
+	
+	
+	
+	// 收藏
+	alertWrap.animate([
+		{
+			opacity:'0',
+			transform: 'scale(0.5)'
+		}
+	],{
+		duration:250,
+		fill:'forwards'
+	});
+	
+	var alertWrapTime = setTimeout(function(){
+		alertWrap.style.cssText = "display:none";
+		clearTimeout(alertWrapTime);
+	},200)
+}
+
+// 点击历史记录
+var objWidth = 0;
+HisIcon.onclick = function(){
+	if(WindowWidth<768){	//如果是移动端设备的话，历史记录块的宽度调整为90%；
+		objWidth = '90%';
+	}else{
+		objWidth = '400px';	//如果不是移动端设备，就用400px宽度
+	}
+	//历史记录图标隐藏
+	HisIcon.style.cssText = "display:none";
+	maskShow();	//弹出遮罩层
+	
+	let HisAlertLeft = (WindowWidth - 400) / 2 + "px";
+	let HisAlertTop = (WindowHeight - 400) / 2 + "px";
+	
+	if(WindowWidth<768){
+		HisAlertLeft = '5%';
+	}
+	// console.log(HisAlertLeft)
+	History.animate([
+		// {
+		// 	width:'3.75rem',
+		// 	height:'3.75rem',
+		// 	borderRadius:'3rem',	//不能写border-radius
+		// 	right:'10%',
+		// 	bottom:'10%'
+		// },
+		{
+			width:objWidth,
+			height:'400px',
+			borderRadius:'1.25rem',
+			right:HisAlertLeft,
+			bottom:HisAlertTop,
+			transform: 'scale(1)',
+		}
+	],{
+		duration:200,
+		fill:'forwards'
+	})
+}
+
+// 收藏弹窗
+collection.onclick = function(){
+	maskShow();
+	let ColAlertLeft = (WindowWidth - 400) / 2 + "px";
+	let ColAlertTop = (WindowHeight - 137) / 2 + "px";
+	if(WindowWidth<768){
+		ColAlertLeft = '5%';
+	}
+	alertWrapCss = "left:" + ColAlertLeft + ";" + "top:" + ColAlertTop + ";" + "display:block";
+	alertWrap.style.cssText = alertWrapCss;
+	
+	alertWrap.animate([
+		{
+			opacity:'1',
+			transform: 'scale(1)'
+		}
+	],{
+		duration:250,
+		fill:'forwards'
+	})
+}
